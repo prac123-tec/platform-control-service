@@ -1,17 +1,17 @@
 pipeline {
-    agent any
+    agent any
 
-    stages {
-        stage('Checkout') {
-            steps {
-                echo 'Checking out source code...'
-            }
-        }
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out source code...'
+            }
+        }
 
-        stage('Build Docker Image') {
-            steps {
-                sh 'docker build -t platform-control-service:v1 .'
-            }
-        }
-    }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t platform-control-service:v1 .'
+            }
+        }
+    }
 }
